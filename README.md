@@ -144,6 +144,9 @@ This behavior is expected due to:
 - Near-zero validation loss indicates sub-pixel localization accuracy
 - Loss saturation reflects convergence to numerical precision limits, not memorization
 
+Additionally, localization accuracy is quantified using Mean Absolute Error (MAE) for x and y coordinates, as well as the mean Euclidean distance error in pixel space. These metrics confirm sub-pixel localization accuracy across the validation set.
+
+
 ---
 
 ## Visualization & Evaluation
@@ -155,6 +158,16 @@ The notebook includes:
 - Qualitative confirmation of spatial localization
 
 These plots provide clear evidence that the model performs as intended.
+
+### Coordinate Visualization
+
+For qualitative evaluation, the notebook explicitly visualizes both the **ground truth** and **predicted (x, y) coordinates** on the input image:
+
+- **Green dot**: Ground truth pixel location  
+- **Red dot**: Predicted pixel location  
+
+The corresponding coordinate values are also displayed alongside each visualization.  
+This directly demonstrates the model’s ability to localize the bright pixel spatially, as required by the assignment.
 
 ---
 
